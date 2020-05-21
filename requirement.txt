@@ -1,0 +1,5 @@
+requests==2.23.0
+aiostream==0.4.1
+numpy==1.18.4
+pandas==1.0.3
+pytest==5.4.2
