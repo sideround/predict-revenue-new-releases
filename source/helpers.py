@@ -1,4 +1,7 @@
 import json
+import re
+import ast
+import numpy as np
 
 def convert_output_id(output):
     data = []
@@ -21,3 +24,21 @@ def get_transformed_json(path):
             else:
                 json_final.append(data[i])
     return json_final
+
+def split_credits_column(df):
+    df["cast"] = df["credits"].apply(lambda x: string_to_dictionary(x, "cast"))
+    df["crew"] = df["credits"].apply(lambda x: string_to_dictionary(x, "crew"))
+    df.drop("credits", axis=1, inplace=True)
+
+def from_json_to_array(df, column, regex):
+    df[column] = df[column].apply(lambda x: re.findall(rf"{regex}", str(x)))
+
+# Private functions
+def string_to_dictionary(data, key):
+    if data and (data == data):
+        json_string = ast.literal_eval(data)
+        json_dump = json.dumps(json_string)
+        json_loaded = json.loads(json_dump)
+        return json_loaded[key]
+    else:
+        return np.NaN
