@@ -12,32 +12,35 @@ Data Part-Time , Barcelona, Dec 19
 
 This repository project contains my final project for Ironhack. I am predicting if a new release (movie) is going to succeed or not and how much is going to make in total.
 
-# Project structure
+# Folder structure
 
+```
   .
-  ├── notebooks             
-  │   ├── 1.Dataset_Builder.ipynb               # Table of contents     
-  │   ├── 2.1.Pre_transformation.ipynb          # Table of contents      
-  │   ├── 2.2.People_Pre_Transformation.ipynb   # Table of contents   
-  │   ├── 3.EDA.ipynb                           # Table of contents  
-  │   ├── 4.Data_Wrangling.ipynb                # Table of contents  
-  │   ├── 5.1.Model_Classification.ipynb        # Table of contents  
-  │   └── 5.2.Model_Regression.ipynb            # Table of contents  
-  ├── source                  
-  │   ├── config.py               # Table of contents
-  │   ├── constants.py            # Table of contents  
-  │   ├── imdb_retriever.py       # Table of contents  
-  │   ├── tmdb_movies.py          # Table of contents  
-  │   └── tmdb_retriever.py       # Table of contents  
+  ├── notebooks                                 # (Contains all notebooks to run the project)
+  │   ├── 1.Dataset_Builder.ipynb               # Runs and builds the dataset
+  │   ├── 2.1.Pre_transformation.ipynb          # Pre-transforms the dataset. JSON -> Array     
+  │   ├── 2.2.People_Pre_Transformation.ipynb   # Creates People dataset, by id and year. 
+  │   ├── 3.EDA.ipynb                           # Visualize and insights from dataset.
+  │   ├── 4.Data_Wrangling.ipynb                # Feature Selection and Feature Engineering
+  │   ├── 5.1.Model_Classification.ipynb        # Supervised Learning - Classification
+  │   └── 5.2.Model_Regression.ipynb            # Supervised Learning - Regression
+  ├── source                      # (Contains all python scripts)      
+  │   ├── config.py               # Contains the TMDB API Key
+  │   ├── constants.py            # Constants  
+  │   ├── constants.py            # Helpers scripts as visualizing confusion matrix, encoding...  
+  │   ├── tmdb_retriever.py       # Script to retrieve convert imdb id to tmdb one.  
+  │   ├── tmdb_movies.py          # Script to retrieve all movies from a tmdb id.
+  │   └── tmdb_people.py          # Script to retrieve all people from a tmdb id. 
   └── data
-      ├── pre-processed               # Table of contents
-      │   └── title_basics.tsv               # Table of contents
-      └── processed               # Table of contents
-          ├── json
-          ├── dataset_builder
-          ├── modeling                # Table of contents  
-          ├── people_transformation          # Table of contents  
-          └── transformation          # Table of contents  
+      ├── pre-processed               # (Contains al pre-processed csv)
+      │   └── title_basics.tsv        # IMDB Interface
+      └── processed                 # (Contains all pre-processed csv)
+          ├── json                  # All outputs from our scripts 
+          ├── dataset_builder       # Final dataset output csv
+          ├── modeling              # CSV used for modeling
+          ├── people_transformation # CSV used for people transformation
+          └── transformation        # CSV used for transformation  
+```
 
 # Problems to solve
 
