@@ -4,13 +4,13 @@
 
 Isaac Rodriguez
 
-Data Part-Time , Barcelona, Dec 19
+Data Part-Time, Barcelona, Dec 19
 
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 
 # Welcome
 
-This repository project contains my final project for Ironhack. I am predicting if a new release (movie) is going to succeed or not and how much is going to make in total.
+This repository project contains my final project for Ironhack. I am predicting if a new release (movie) is going to succeed or not and how much is revenue going to be.
 
 # Folder structure
 
@@ -42,10 +42,16 @@ This repository project contains my final project for Ironhack. I am predicting 
           └── transformation        # CSV used for transformation  
 ```
 
+# Pre-conditions
+
+- To successfully run our python scripts, you should get a [TMDB API KEY](https://www.themoviedb.org/documentation/api) and then put it over `../source/config.py`. 
+- You should be aware that running the project from scratch (including getting the dataset) takes between 4 - 5 hours. In case you only want to run the models, contact me and I will provide you the dataset (as it's too big to be included here).
+- Tests runs automatically when you push to master.
+
 # Problems to solve
 
 - Is a new movie release going to succeed? We assume movie success when the vote average is superior to 8.0.
-- How much is the movie going to make?
+- How much will the movie revenue going to be?
 
 # Dataset
 
