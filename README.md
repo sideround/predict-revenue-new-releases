@@ -14,9 +14,9 @@ This repository project contains my final project for Ironhack. I am predicting 
 
 # Approach
 
-Our main structure was to follow these key subjects:
+Our main structure is to follow these key subjects:
 
-- Data Engineering (To build the dataset)
+- Data Engineering (Build the dataset)
 - Data Analytics (Correlations, get insights, discover not obvious patterns)
 - Machine Learning (Train and predict)
 
@@ -42,6 +42,7 @@ Our main structure was to follow these key subjects:
   └── data
       ├── pre-processed               # (Contains al pre-processed csv)
       │   └── title_basics.tsv        # IMDB Interface
+      ├── exports                   # Output plots
       └── processed                 # (Contains all processed csv)
           ├── json                  # All outputs from our scripts 
           ├── dataset_builder       # Final dataset output csv
@@ -97,6 +98,8 @@ Before evaluating our model, we wanted to select the one with lowest number of F
 
 The one with lowest FP was **RandomForestClassifier**
 
+![RandomForestClassifier](data/exports/RandomForestClassifier_classification_heatmap.png)
+
 **Regression**:
 
 We trained our dataset with the following models: 
@@ -110,6 +113,8 @@ We trained our dataset with the following models:
 Before evaluating our model we wanted to select the one with highet r2_score and lowest STD value. 
 
 The one with these metrics was **RandomForestRegressor**!
+
+![RandomForestRegressor](data/exports/RandomForestRegressor_regression_scatter.png)
 
 # Visualize our Model
 
