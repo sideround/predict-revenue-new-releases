@@ -4,25 +4,17 @@ import requests
 import config as config
 import constants as constants
 import pandas as pd
-import os.path
-import numpy as np
-import asyncio
 import json
-from imdb import IMDb
-import csv
 import concurrent.futures
-import requests
 import time
-
-api_key = config.tmdb_api_key
 
 output = []
 CONNECTIONS = 40
 TIMEOUT = 5
 
-title_basics_df = pd.read_csv("../data/processed/title_basics_before_2020.csv", engine="python")
+title_basics_df = pd.read_csv("../data/processed/dataset_builder/title_basics_before_2020.csv", engine="python")
 
-urls = ['https://api.themoviedb.org/3/find/' + i + '?api_key=' +  api_key + '&external_source=imdb_id' for i in title_basics_df.tconst]
+urls = [constants.BASE_URL + 'find/' + i + '?api_key=' +  config.tmdb_api_key + '&external_source=imdb_id' for i in title_basics_df.tconst]
 
 def request_tmdb(url, timeout):
     request = requests.get(url, timeout=timeout)
@@ -44,6 +36,5 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=CONNECTIONS) as executor:
 
 print(f'Took {time_2-time_1:.2f} s')
 
-# Get final data and export
 with open('../data/processed/json/tmdb_id_list.json', 'w', encoding='utf-8') as f:
     json.dump(output, f, ensure_ascii=False, indent=4)
