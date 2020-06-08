@@ -109,10 +109,21 @@ We trained our dataset with the following models:
 
 Before evaluating our model we wanted to select the one with highet r2_score and lowest STD value. 
 
-The one with these metrics was **XGBRegressor** by far!
+The one with these metrics was **RandomForestRegressor**!
+
+# Visualize our Model
+
+We used our model to predict if `Avatar 2` is going to succeed and how much is going to make. Results: 
+
+# Next steps
+
+- Add more metadata to each release. As producers, companies...
+- Tune our models with better hyperparameters.
+- PCA to remove clearly uncorrelated features.
 
 # Conclusion
 
+- We got an incredible score from the selected models. It’s utopic to relay on metadata only to predict the success of a movie though. We should create a model that avoids black swans and long-tail distribution scenarios! 
 
 # Links
 
