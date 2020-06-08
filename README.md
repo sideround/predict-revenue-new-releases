@@ -118,7 +118,31 @@ The one with these metrics was **RandomForestRegressor**!
 
 # Visualize our Model
 
-We used our model to predict if `Avatar 2` is going to succeed and how much is going to make. Results: 
+We used our model to predict if `Avatar 2` is going to succeed and how much is going to make. 
+
+To put in context, let's create a table to visualize diferences between `Avatar` and what we predict for `Avatar 2`
+
+<table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Success</th>
+        <th>Revenue</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Avatar</td>
+            <td>False (7.4)</td>
+            <td><code>$2,790,439,000</code></td>
+        </tr>
+        <tr>
+            <td>Avatar 2</td>
+            <td>False</td>
+            <td><code>$215.992.000</code></td>
+        </tr>
+    </tbody>
+  </table>
 
 # Next steps
 
@@ -128,7 +152,8 @@ We used our model to predict if `Avatar 2` is going to succeed and how much is g
 
 # Conclusion
 
-- We got an incredible score from the selected models. It’s utopic to relay on metadata only to predict the success of a movie though. We should create a model that avoids black swans and long-tail distribution scenarios! 
+- We got a good score from the selected models. It’s utopic to relay on metadata only to predict the success of a movie though. We should create a model that avoids black swans and long-tail distribution scenarios! 
+- Predicting `Avatar 2` turned out the revenue between movies is going to be reduced by 10x. As Avatar was an outlier, we should wait until it is released to determine if our model should be more prepared for this kind of event.
 
 # Links
 
