@@ -113,6 +113,7 @@ We trained our dataset with the following models:
 Before evaluating our model we wanted to select the one with higher r2_score and lowest STD value.
 
 **r2_score**: This number indicates the percentage of the variance in the dependent variable that the independent variables explain collectively. Highest this number the best!
+
 **STD**: Standard deviation is a measure of the amount of variation or dispersion of a set of values. Lowest this number the best!
 
 The one with these metrics was **RandomForestRegressor**!
