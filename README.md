@@ -130,7 +130,7 @@ To put in context, let's create a table to visualize differences between `Avatar
     <thead>
       <tr>
         <th>Title</th>
-        <th>Success</th>
+        <th>Movie Success</th>
         <th>Revenue</th>
       </tr>
     </thead>
@@ -142,7 +142,7 @@ To put in context, let's create a table to visualize differences between `Avatar
         </tr>
         <tr>
             <td>Avatar 2</td>
-            <td>False</td>
+            <td>False (< 8)</td>
             <td><code>$215.992.000</code></td>
         </tr>
     </tbody>
